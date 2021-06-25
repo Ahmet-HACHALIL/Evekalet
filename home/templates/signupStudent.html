@@ -1,0 +1,56 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Join Us| Agency</title>
+        {% load static %}
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href={% static "css/stylein.css" %} type="text/css" media="all">
+    </head>
+    <body>
+        <div class="wrapper fadeInDown">
+            <div id="formContent">
+            <!-- Tabs Titles -->
+
+                <!-- Icon -->
+                <div class="fadeIn first">
+                    {% load static %}
+                    <img src={% static "images/bg_flag.png" %} alt="Turkey">
+                    <h1> User Sign Up</h1>
+                </div>
+
+                {% if messages %}
+                    {% for message in messages %}
+                        <div style="margin-bottom: 5px; background-color: #fff0f0; color: #9a0822; width:85%; height: 50px; border-radius: 5px; margin-left: 33px; " class="alert alert-{{ message.tags }}" role="alert">
+                            <br>
+                            {{ message }}
+                        </div>
+                    {% endfor %}
+                {% endif %}
+
+                <!-- Login Form -->
+                <form method="post">
+                    {% csrf_token %}
+                    {% for field in form %}
+                        <p>
+                            {{ field.label_tag }}<br>
+                            {{ field }}
+                            {% for error in field.errors %}
+                                <p style="color: red">{{ error }}</p>
+                            {% endfor %}
+                        </p>
+                    {% endfor %}
+                    <button type="submit" value="Sign Up">Sign Up</button>
+                </form>
+
+
+                <!-- Remind Passowrd -->
+                <div id="formFooter">
+
+                </div>
+
+            </div>
+        </div>
+    </body>
+</html>
+
+

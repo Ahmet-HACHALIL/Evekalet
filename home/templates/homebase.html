@@ -1,0 +1,31 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+
+    <title>{% block title %} E-Vekalet {% endblock %}</title>
+    <meta name="keywords" content="{% block keywords %} Anahtar sayfa kelimeler{% endblock %}">
+    <meta name="description" content="{% block description %} Anasayfa kısa açıklama{% endblock %}">
+
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/reset.css'%}" type="text/css" media="all">
+    <link rel="stylesheet" href="{% static 'css/layout.css'%}" type="text/css" media="all">
+    <link rel="stylesheet" href="{% static 'css/style.css'%}" type="text/css" media="all">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script type="text/javascript" src="{%  static 'js/jquery-1.4.2.js'%}" ></script>
+    <!--[if lt IE 9]>
+    <script type="text/javascript" src="{% static 'js/ie6_script_other.js'%}"></script>
+    <script type="text/javascript" src="{% static 'js/html5.js'%}"></script>
+    <![endif]-->
+    {% block head %} {% endblock %}
+</head>
+<body>
+
+    {% include 'header.html' %}
+    {% block content %} {% endblock %}
+    {% include 'footer.html' %}
+    {% block foot %} {% endblock %}
+
+</body>
+</html>

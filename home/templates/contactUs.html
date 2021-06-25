@@ -1,0 +1,74 @@
+{% extends "homebase.html" %}
+
+{% block title %} {{ setting.title }} {% endblock %}
+{% block keywords %} {{ setting.keywords }} {% endblock %}
+{% block description %} {{ setting.description }} {% endblock %}
+
+{% block head %}
+    <link rel='shortcut icon' type='image/x-icon' href='{{ setting.icon.url }}' />
+{% endblock %}
+
+{% block content %}
+    <body id="page1">
+    <!-- START PAGE SOURCE -->
+    <div class="body2">
+        <div class="body7">
+            <div class="body3">
+                <div>
+                    <div class="main">
+                        <section id="content">
+                            <div class="wrapper">
+                                <div class="box_shadow">
+                                    <div class="box">
+                                        {% load static %}
+                                        <div class="wrapper">
+                                            <h2>Contact Us</h2>
+                                            <figure style="display: inline">
+                                                <img style="float: left" width="45" height="45" src="{% static 'images/location_icon.png'%}" alt="">
+                                                <b style="float: left; font-size: 15px;">Location: </b><br>
+                                                <p style="float: left; padding-top: 5px; font-size: 15px;">
+                                                    100.yil Mah. 1003 Cad. Karabuk/Turkey
+                                                </p>
+                                            </figure>
+                                        </div>
+                                        <div class="wrapper">
+                                            <figure style="display: inline">
+                                                <img style="float: left" width="45" height="45" src="{% static 'images/phone_icon.png'%}" alt="">
+                                                <b style="float: left; font-size: 15px;">Phone Number: </b><br>
+                                                <p style="float: left; padding-top: 5px; font-size: 15px;">
+                                                    444 0 178
+                                                </p>
+                                            </figure>
+                                        </div>
+                                        <div class="wrapper">
+                                            <figure style="display: inline">
+                                                <img style="float: left" width="45" height="45" src="{% static 'images/email_icon.png'%}" alt="">
+                                                <b style="float: left; font-size: 15px;">E-mail: </b><br>
+                                                <p style="float: left; padding-top: 5px; font-size: 15px;">
+                                                    contact@evekalet.edu.tr
+                                                </p>
+                                            </figure>
+                                        </div>
+                                        <div class="wrapper">
+                                            <figure style="display: inline">
+                                                <img style="float: left" width="40" height="40" src="{% static 'images/web_icon.png'%}" alt="">
+                                                <b style="margin-left: 5px; float: left; font-size: 15px;">E-mail: </b><br>
+                                                <p style="margin-left: 5px; float: left; padding-top: 5px; font-size: 15px;">
+                                                    contact@evekalet.edu.tr
+                                                </p>
+                                            </figure>
+                                        </div>
+                                            <br>
+                                            <br>
+                                        </div>
+                                    </div>
+                                </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- END PAGE SOURCE -->
+</body>
+{% endblock %}

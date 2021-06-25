@@ -1,0 +1,47 @@
+<div class="body2">
+    <div class="body7">
+        <div class="body3">
+            <div class="body4">
+                <div class="main">
+                    <header>
+                        <nav>
+                            <ul id="menu1">
+                                <li id="menu_active"><a href="/home">Home</a></li>
+                                <li><a href="/pdf/MakeAgency">Agency</a></li>
+                                <li><a href="/websiteInfo">News</a></li>
+                                <li><a href="/contactUs">Contact Us</a></li>
+                            </ul>
+                            {% if user.id is not None %}
+                                <ul id="menu1"  style="margin-left: 100px">
+                                    <li><a href="">{{ user.username }}</a></li>
+                                    {% if request.user.is_superuser %}
+                                        <li><a style="width: 100%;padding-right: 7px;padding-left: 7px;" href="/signup">Add Student</a></li>
+                                    {% endif %}
+                                    <li><a href="/logout">Log out </a></li>
+                                    <!-- <li><a onClick="javascript:window.print()">print</a></li> -->
+                                </ul>
+                            {% else %}
+                                <ul id="menu2">
+                                    <li><a href="/loginType">Sign In</a></li>
+                                    <!-- <li><a onClick="javascript:window.print()">print</a></li> -->
+                                </ul>
+                            {% endif %}
+                        </nav>
+
+                        <div class="search_box">
+                            <br><br>
+                            <form class="example" action="/search/" method="post">
+                                {% csrf_token %}
+                                <input type="text" class="input search-input" name="query" placeholder="what are you looking for?">
+                                <br><br><br><i class="fa fa-search"></i>
+                            </form>
+                        </div>
+                        <h1 style="text-shadow: 4px 3px #8a0e0e;"><a href="" id="logo">E-Vekalet</a></h1>
+                    </header>
+                    <br>
+                    <br>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
