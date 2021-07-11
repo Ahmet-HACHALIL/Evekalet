@@ -17,10 +17,10 @@
 
         <div class="wrapper fadeInDown">
             <div id="AgencyFormContent">
-                <h2 style="margin-top: 10px; color: #8a0e0e">THE REPUBLIC OF TURKEY &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; E-VEKALET</h2>
+                <h2 style="margin-top: 10px; color: #8a0e0e">THE REPUBLIC OF TURKEY / TÜRKIYE CUMHURIYETI &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; E-VEKALET</h2>
                 <h3 style="margin-top: 10px; color: #8a0e0e"></h3>
                 <hr>
-                        <h1 style="margin-top: 25px; text-align: left;">Agency</h1>
+                        <h1 style="margin-top: 25px; text-align: left;">Agency / Vekalet</h1>
                         <div style="margin-right:20px; text-align: right">
                             <img height="125px" width="110px" src="{{ student.image.path }}"/>
                         </div>
@@ -28,22 +28,39 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-12">
-            <h1>This agency was created to <b style="color: #8a0e0e">{{ cs3 }}.</b></h1>
-               <br><br><br>
-            <p style="font-size: 16px">
+                <h1>This agency was created to / Bu Vekalet olusturmanin sebebi:</h1>
+                <h1><b style="color: #8a0e0e">{{ cs3 }}.</b> </h1>
+
+               <br>
+            <p style="font-size: 14px">
                 To all departments of <b>{{ student.university_name }}</b> with Existing Boards and Student Affairs Directorate of All Educational Institutions and Organizations within the borders of the Republic of Turkey, his name & surname is  <b>{{ cs.student_name_surname }}</b>, Student number <b>{{ cs.student_id }}</b>, his email <b>{{ cs2.email }}</b> is appointed as a proxy to apply for registration, to make written and applications, to arrange and sign documents, to correct mistakes.
-                <br><br><br><br><br><br>
+                <br><br>
                 My name is <b>{{ student.student_name_surname }}</b> and my student number is <b>{{ student.student_id }}</b>, I am a student of <b>{{ student.college }}</b> at <b>{{ student.university_name }}</b>. My true wishes were written exactly above. I also declare that the person concerned has accepted the text and will sign it when he got the agency document.
 
             </p>
-            <p style="margin-top: 210px;font-size: 17px">
-                Name Surname ...........<br>
-                Signature ............<br>
-                Date .../.../...
+                <br>
+                <hr>
+                <br>
+            <p style="font-size: 14px">
+                Mevcut Kurullari ile <b>{{ student.university_name }}</b> tüm bölümlerine ve Ögrenci Isleri Daire Baskanligina
+                Türkiye Cumhuriyeti sinirlari içindeki Egitim Kurum ve Kuruluslari, adi ve
+                soyadi <b>{{ cs.student_name_surname }}</b>, Ögrenci numarasi <b>{{ cs.student_id }}</b>, e-posta adresi
+                <b>{{ cs2.email }}</b> kayit için basvuruda bulunmak, yazili yapmak
+                ve uygulamalari, evraklari düzenlemek ve imzalamak, hatalari düzeltmek için vekil olarak atanir.
+                <br><br>
+                Adim <b>{{ student.student_name_surname }}</b> ve ögrenci numaram <b>{{ student.student_id }}</b>, <b>{{ student.college }}</b> ögrencisiyim,
+                <b>{{ student.university_name }}</b>'de okuyorum. Gerçek dileklerim tam olarak yukarida yazilmisti. Ayrica ilgili kisinin sahip oldugunu beyan ederim.
+                Bu kisi metni kabul etti ve vekalet belgesini aldiginda imzalayacak.
+
+            </p>
+            <p style="margin-top: 90px;font-size: 16px">
+                Name Surname / Ad Soyad ...........<br>
+                Signature / Imza ............<br>
+                Date / Tarih .../.../...
             </p>
 
             </div>
-
+            <h1 style="margin-top: 90px;margin-left: auto;margin-right: auto;display: block;text-align: center">barcode: {{ rand }}</h1>
         </div>
 
     </div>
